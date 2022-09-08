@@ -1,0 +1,75 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif, sans-serif;
+    font-weight: normal;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to TOP, rgb(170, 140, 111), rgba(139, 228, 255, 0.411));
+    }
+  
+    .calculator-grid {
+      display: grid;
+      justify-content: center;
+      align-content: center;
+      min-height: 100vh;
+      grid-template-columns: repeat(4, 100px);
+      grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+      }
+  
+      .calculator-grid > button {
+        cursor: pointer;
+        font-size: 2rem;
+        border: 1px, solid #FFFFFF;
+        outline-style:auto;
+        outline: width 2px;
+        outline-color: rgb(0, 0, 0);
+        background-color: rbga(255, 255, 255, 0.75);
+      }
+  
+        .calculator-grid > button:hover {
+          background-color: #bebebe;
+        }
+  
+        .span-two {
+          grid-column: span 2;
+          color: #00613c;
+          background-color: rgb(139, 218, 178);
+        }
+        .delete {
+            background-color: rgba(255, 0, 0, 0.877);
+            color: rgb(100, 0, 0);
+        }
+  
+        .output{
+          grid-column: 1 / -1;
+          background-color: rgb(46, 46, 46);
+          outline-style:auto;
+          outline: width 2px;
+          outline-color: rgb(0, 0, 0);
+          display: flex;
+          align-items: flex-end;
+          justify-content: space-around;
+          flex-direction: column;
+          padding: 10px;
+          word-wrap: break-word;
+          word-break: break-all;
+        }
+  
+        .output .previous-operand{
+          color: rgb(139, 218, 178);
+          font-size: 1.5rem;
+        }
+  
+        .output .current-operand{
+          color: white;
+          font-size: 2.5rem;
+        }
+
+        .operators {
+          font-weight:bolder;
+          color:rgb(0, 0, 0);
+        }
+ 
